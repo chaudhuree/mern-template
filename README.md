@@ -20,6 +20,9 @@
 
 > done. by this way we can easily set token dynamically and use it in other routes.
 
-->> and we will do the same code paste in register route Test tab.because,
+*and we will do the same code paste in register route Test tab.because,
 in register route we will get token there like login route and we have to set it 
-again. 
+again* 
+
+*added postman documentation link in the end of this file.*
+[postman documentation](https://documenter.getpostman.com/view/20773865/2s93RTSDGP#14e7c6df-9a04-433a-b44a-917b76f521fe)
