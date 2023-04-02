@@ -33,6 +33,12 @@ const errorHandlerMiddleware = require('./middleware/error-handler');
 // routes middleware
 readdirSync("./routes").map(r => app.use("/api/v1", require(`./routes/${r}`))) 
 
+// if someone want to use static files
+// app.use(express.json());
+//in the public folder we have index.html file or any other static file like css, js, images etc
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.get('/', express.static(path.join(__dirname, 'public')));
+
 // routes
 app.get('/', (req, res) => {
   res.send('server is running');
