@@ -31,7 +31,10 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 // routes middleware
-readdirSync("./routes").map(r => app.use("/api/v1", require(`./routes/${r}`))) 
+const routesPath = path.resolve(__dirname, './routes');
+readdirSync(routesPath).map((r) =>
+  app.use("/api/v1", require(path.join(routesPath, r)))
+);
 
 // if someone want to use static files
 // app.use(express.json());
